@@ -131,7 +131,7 @@ export function AuthProvider({ children }: Props) {
         },
       });
     },
-    []
+    [],
   );
 
   // CONFIRM REGISTER
@@ -195,7 +195,7 @@ export function AuthProvider({ children }: Props) {
       forgotPassword,
       confirmRegister,
       resendCodeRegister,
-    ]
+    ],
   );
 
   return <AuthContext.Provider value={memoizedValue}>{children}</AuthContext.Provider>;

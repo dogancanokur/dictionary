@@ -54,7 +54,7 @@ export const NavItem = forwardRef<HTMLDivElement, NavItemDesktopProps>(
         {renderContent}
       </Link>
     );
-  }
+  },
 );
 
 // ----------------------------------------------------------------------

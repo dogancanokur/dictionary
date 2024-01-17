@@ -39,7 +39,7 @@ export default function UploadView() {
       setFile(
         Object.assign(newFile, {
           preview: URL.createObjectURL(newFile),
-        })
+        }),
       );
     }
   }, []);
@@ -50,7 +50,7 @@ export default function UploadView() {
       setAvatarUrl(
         Object.assign(newFile, {
           preview: URL.createObjectURL(newFile),
-        })
+        }),
       );
     }
   }, []);
@@ -62,11 +62,11 @@ export default function UploadView() {
         ...acceptedFiles.map((newFile) =>
           Object.assign(newFile, {
             preview: URL.createObjectURL(newFile),
-          })
+          }),
         ),
       ]);
     },
-    [files]
+    [files],
   );
 
   const handleRemoveFile = (inputFile: File | string) => {

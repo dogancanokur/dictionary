@@ -89,7 +89,7 @@ const Logo = forwardRef<HTMLDivElement, LogoProps>(
         {logo}
       </Link>
     );
-  }
+  },
 );
 
 export default Logo;

@@ -60,7 +60,7 @@ export default function BankingBalanceStatistics({ title, subheader, chart, ...o
       popover.onClose();
       setSeriesData(newValue);
     },
-    [popover]
+    [popover],
   );
 
   return (

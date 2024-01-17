@@ -60,7 +60,7 @@ export default function BookingStatistics({ title, subheader, chart, ...other }:
       popover.onClose();
       setSeriesData(newValue);
     },
-    [popover]
+    [popover],
   );
 
   return (

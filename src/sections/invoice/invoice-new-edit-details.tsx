@@ -63,21 +63,21 @@ export default function InvoiceNewEditDetails() {
       resetField(`items[${index}].price`);
       resetField(`items[${index}].total`);
     },
-    [resetField]
+    [resetField],
   );
 
   const handleSelectService = useCallback(
     (index: number, option: string) => {
       setValue(
         `items[${index}].price`,
-        INVOICE_SERVICE_OPTIONS.find((service) => service.name === option)?.price
+        INVOICE_SERVICE_OPTIONS.find((service) => service.name === option)?.price,
       );
       setValue(
         `items[${index}].total`,
-        values.items.map((item: IInvoiceItem) => item.quantity * item.price)[index]
+        values.items.map((item: IInvoiceItem) => item.quantity * item.price)[index],
       );
     },
-    [setValue, values.items]
+    [setValue, values.items],
   );
 
   const handleChangeQuantity = useCallback(
@@ -85,10 +85,10 @@ export default function InvoiceNewEditDetails() {
       setValue(`items[${index}].quantity`, Number(event.target.value));
       setValue(
         `items[${index}].total`,
-        values.items.map((item: IInvoiceItem) => item.quantity * item.price)[index]
+        values.items.map((item: IInvoiceItem) => item.quantity * item.price)[index],
       );
     },
-    [setValue, values.items]
+    [setValue, values.items],
   );
 
   const handleChangePrice = useCallback(
@@ -96,10 +96,10 @@ export default function InvoiceNewEditDetails() {
       setValue(`items[${index}].price`, Number(event.target.value));
       setValue(
         `items[${index}].total`,
-        values.items.map((item: IInvoiceItem) => item.quantity * item.price)[index]
+        values.items.map((item: IInvoiceItem) => item.quantity * item.price)[index],
       );
     },
-    [setValue, values.items]
+    [setValue, values.items],
   );
 
   const renderTotal = (

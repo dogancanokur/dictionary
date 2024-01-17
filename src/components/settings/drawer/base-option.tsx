@@ -36,7 +36,7 @@ export default function BaseOptions({ icons, options, value, onChange }: Props) 
                     theme.palette.mode === 'light'
                       ? theme.palette.grey[500]
                       : theme.palette.common.black,
-                    0.08
+                    0.08,
                   )}`,
               }),
               '& .svg-color': {

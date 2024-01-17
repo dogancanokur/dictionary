@@ -58,7 +58,7 @@ export default function KanbanColumnToolBar({
         onUpdateColumn(name);
       }
     },
-    [name, onUpdateColumn]
+    [name, onUpdateColumn],
   );
 
   return (

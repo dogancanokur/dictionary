@@ -31,7 +31,7 @@ function MapInteraction({ ...other }: MapBoxProps) {
         ...prevSettings,
         [name]: value,
       })),
-    []
+    [],
   );
 
   return (

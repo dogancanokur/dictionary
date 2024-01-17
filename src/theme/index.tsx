@@ -50,7 +50,7 @@ export default function ThemeProvider({ children }: Props) {
       typography,
       shape: { borderRadius: 8 },
     }),
-    []
+    [],
   );
 
   const memoizedValue = useMemo(
@@ -65,9 +65,9 @@ export default function ThemeProvider({ children }: Props) {
         // Presets: remove if not in use
         presetsOption,
         // Contrast: remove if not in use
-        contrastOption.theme
+        contrastOption.theme,
       ),
-    [baseOption, directionOption, darkModeOption, presetsOption, contrastOption.theme]
+    [baseOption, directionOption, darkModeOption, presetsOption, contrastOption.theme],
   );
 
   const theme = createTheme(memoizedValue as ThemeOptions);
@@ -76,7 +76,7 @@ export default function ThemeProvider({ children }: Props) {
 
   const themeWithLocale = useMemo(
     () => createTheme(theme, currentLang.systemValue),
-    [currentLang.systemValue, theme]
+    [currentLang.systemValue, theme],
   );
 
   return (

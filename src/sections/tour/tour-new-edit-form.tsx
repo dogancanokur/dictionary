@@ -66,7 +66,7 @@ export default function TourNewEditForm({ currentTour }: Props) {
         .test(
           'date-min',
           'End date must be later than start date',
-          (value, { parent }) => value.getTime() > parent.startDate.getTime()
+          (value, { parent }) => value.getTime() > parent.startDate.getTime(),
         ),
     }),
   });
@@ -87,7 +87,7 @@ export default function TourNewEditForm({ currentTour }: Props) {
         endDate: currentTour?.available.endDate || null,
       },
     }),
-    [currentTour]
+    [currentTour],
   );
 
   const methods = useForm({
@@ -131,12 +131,12 @@ export default function TourNewEditForm({ currentTour }: Props) {
       const newFiles = acceptedFiles.map((file) =>
         Object.assign(file, {
           preview: URL.createObjectURL(file),
-        })
+        }),
       );
 
       setValue('images', [...files, ...newFiles], { shouldValidate: true });
     },
-    [setValue, values.images]
+    [setValue, values.images],
   );
 
   const handleRemoveFile = useCallback(
@@ -144,7 +144,7 @@ export default function TourNewEditForm({ currentTour }: Props) {
       const filtered = values.images && values.images?.filter((file) => file !== inputFile);
       setValue('images', filtered);
     },
-    [setValue, values.images]
+    [setValue, values.images],
   );
 
   const handleRemoveAllFiles = useCallback(() => {
@@ -310,7 +310,7 @@ export default function TourNewEditForm({ currentTour }: Props) {
                 getOptionLabel={(option) => option}
                 renderOption={(props, option) => {
                   const { code, label, phone } = countries.filter(
-                    (country) => country.label === option
+                    (country) => country.label === option,
                   )[0];
 
                   if (!label) {

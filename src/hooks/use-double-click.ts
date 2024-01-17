@@ -30,6 +30,6 @@ export function useDoubleClick({ click, doubleClick, timeout = 250 }: Props) {
         doubleClick(event);
       }
     },
-    [click, doubleClick, timeout]
+    [click, doubleClick, timeout],
   );
 }

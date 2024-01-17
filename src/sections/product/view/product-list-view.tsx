@@ -98,7 +98,7 @@ export default function ProductListView() {
 
   const dataInPage = dataFiltered.slice(
     table.page * table.rowsPerPage,
-    table.page * table.rowsPerPage + table.rowsPerPage
+    table.page * table.rowsPerPage + table.rowsPerPage,
   );
 
   const denseHeight = table.dense ? 60 : 80;
@@ -115,7 +115,7 @@ export default function ProductListView() {
         [name]: value,
       }));
     },
-    [table]
+    [table],
   );
 
   const handleDeleteRow = useCallback(
@@ -125,7 +125,7 @@ export default function ProductListView() {
 
       table.onUpdatePageDeleteRow(dataInPage.length);
     },
-    [dataInPage.length, table, tableData]
+    [dataInPage.length, table, tableData],
   );
 
   const handleDeleteRows = useCallback(() => {
@@ -143,14 +143,14 @@ export default function ProductListView() {
     (id: string) => {
       router.push(paths.dashboard.product.edit(id));
     },
-    [router]
+    [router],
   );
 
   const handleViewRow = useCallback(
     (id: string) => {
       router.push(paths.dashboard.product.details(id));
     },
-    [router]
+    [router],
   );
 
   const handleResetFilters = useCallback(() => {
@@ -212,7 +212,7 @@ export default function ProductListView() {
               onSelectAllRows={(checked) =>
                 table.onSelectAllRows(
                   checked,
-                  tableData.map((row) => row.id)
+                  tableData.map((row) => row.id),
                 )
               }
               action={
@@ -236,7 +236,7 @@ export default function ProductListView() {
                   onSelectAllRows={(checked) =>
                     table.onSelectAllRows(
                       checked,
-                      tableData.map((row) => row.id)
+                      tableData.map((row) => row.id),
                     )
                   }
                 />
@@ -251,7 +251,7 @@ export default function ProductListView() {
                       {dataFiltered
                         .slice(
                           table.page * table.rowsPerPage,
-                          table.page * table.rowsPerPage + table.rowsPerPage
+                          table.page * table.rowsPerPage + table.rowsPerPage,
                         )
                         .map((row) => (
                           <ProductTableRow
@@ -342,7 +342,7 @@ function applyFilter({
 
   if (name) {
     inputData = inputData.filter(
-      (product) => product.name.toLowerCase().indexOf(name.toLowerCase()) !== -1
+      (product) => product.name.toLowerCase().indexOf(name.toLowerCase()) !== -1,
     );
   }
 

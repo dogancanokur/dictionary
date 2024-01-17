@@ -36,7 +36,7 @@ export default function useTable(props?: UseTableProps): ReturnType {
         setOrderBy(id);
       }
     },
-    [order, orderBy]
+    [order, orderBy],
   );
 
   const onSelectRow = useCallback(
@@ -47,7 +47,7 @@ export default function useTable(props?: UseTableProps): ReturnType {
 
       setSelected(newSelected);
     },
-    [selected]
+    [selected],
   );
 
   const onChangeRowsPerPage = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
@@ -84,7 +84,7 @@ export default function useTable(props?: UseTableProps): ReturnType {
         }
       }
     },
-    [page]
+    [page],
   );
 
   const onUpdatePageDeleteRows = useCallback(
@@ -112,7 +112,7 @@ export default function useTable(props?: UseTableProps): ReturnType {
         }
       }
     },
-    [page, rowsPerPage, selected.length]
+    [page, rowsPerPage, selected.length],
   );
 
   return {

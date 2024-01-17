@@ -39,7 +39,7 @@ export function applyFilter({ inputData, query }: FilterProps) {
     inputData = inputData.filter(
       (item) =>
         item.title.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
-        item.path.toLowerCase().indexOf(query.toLowerCase()) !== -1
+        item.path.toLowerCase().indexOf(query.toLowerCase()) !== -1,
     );
   }
 
@@ -69,7 +69,7 @@ export function splitPath(array: NavListProps[], key: string) {
         currItem.children.map((item: NavListProps) => ({
           path: path.concat(item.title),
           currItem: item,
-        }))
+        })),
       );
     }
   }

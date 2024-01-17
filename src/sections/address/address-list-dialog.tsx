@@ -58,7 +58,7 @@ export default function AddressListDialog({
       setSearchAddress('');
       onClose();
     },
-    [onClose, onSelect]
+    [onClose, onSelect],
   );
 
   const renderList = (
@@ -160,7 +160,7 @@ function applyFilter({ inputData, query }: { inputData: IAddressItem[]; query: s
       (address) =>
         address.name.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
         address.fullAddress.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
-        `${address.company}`.toLowerCase().indexOf(query.toLowerCase()) !== -1
+        `${address.company}`.toLowerCase().indexOf(query.toLowerCase()) !== -1,
     );
   }
 

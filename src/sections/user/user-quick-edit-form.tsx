@@ -60,7 +60,7 @@ export default function UserQuickEditForm({ currentUser, open, onClose }: Props)
       company: currentUser?.company || '',
       role: currentUser?.role || '',
     }),
-    [currentUser]
+    [currentUser],
   );
 
   const methods = useForm({
@@ -134,7 +134,7 @@ export default function UserQuickEditForm({ currentUser, open, onClose }: Props)
               getOptionLabel={(option) => option}
               renderOption={(props, option) => {
                 const { code, label, phone } = countries.filter(
-                  (country) => country.label === option
+                  (country) => country.label === option,
                 )[0];
 
                 if (!label) {

@@ -42,12 +42,12 @@ export function CheckoutProvider({ children }: Props) {
   const onGetCart = useCallback(() => {
     const totalItems: number = state.items.reduce(
       (total: number, item: ICheckoutItem) => total + item.quantity,
-      0
+      0,
     );
 
     const subTotal: number = state.items.reduce(
       (total: number, item: ICheckoutItem) => total + item.quantity * item.price,
-      0
+      0,
     );
 
     update('subTotal', subTotal);
@@ -93,7 +93,7 @@ export function CheckoutProvider({ children }: Props) {
 
       update('items', updatedItems);
     },
-    [update, state.items]
+    [update, state.items],
   );
 
   const onDeleteCart = useCallback(
@@ -102,7 +102,7 @@ export function CheckoutProvider({ children }: Props) {
 
       update('items', updatedItems);
     },
-    [update, state.items]
+    [update, state.items],
   );
 
   const onBackStep = useCallback(() => {
@@ -117,7 +117,7 @@ export function CheckoutProvider({ children }: Props) {
     (step: number) => {
       update('activeStep', step);
     },
-    [update]
+    [update],
   );
 
   const onIncreaseQuantity = useCallback(
@@ -134,7 +134,7 @@ export function CheckoutProvider({ children }: Props) {
 
       update('items', updatedItems);
     },
-    [update, state.items]
+    [update, state.items],
   );
 
   const onDecreaseQuantity = useCallback(
@@ -151,7 +151,7 @@ export function CheckoutProvider({ children }: Props) {
 
       update('items', updatedItems);
     },
-    [update, state.items]
+    [update, state.items],
   );
 
   const onCreateBilling = useCallback(
@@ -160,21 +160,21 @@ export function CheckoutProvider({ children }: Props) {
 
       onNextStep();
     },
-    [onNextStep, update]
+    [onNextStep, update],
   );
 
   const onApplyDiscount = useCallback(
     (discount: number) => {
       update('discount', discount);
     },
-    [update]
+    [update],
   );
 
   const onApplyShipping = useCallback(
     (shipping: number) => {
       update('shipping', shipping);
     },
-    [update]
+    [update],
   );
 
   const completed = state.activeStep === PRODUCT_CHECKOUT_STEPS.length;
@@ -222,7 +222,7 @@ export function CheckoutProvider({ children }: Props) {
       onNextStep,
       onReset,
       state,
-    ]
+    ],
   );
 
   return <CheckoutContext.Provider value={memoizedValue}>{children}</CheckoutContext.Provider>;

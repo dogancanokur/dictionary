@@ -68,7 +68,7 @@ const createData = (
   name: string,
   group: string,
   role: string | null,
-  avatarUrl: string | null
+  avatarUrl: string | null,
 ) => ({
   name,
   group,
@@ -99,7 +99,7 @@ const SIMPLE_DATA = {
                 'sheridan mckee',
                 'development',
                 'back end developer',
-                _mock.image.avatar(6)
+                _mock.image.avatar(6),
               ),
               children: [
                 {
@@ -107,7 +107,7 @@ const SIMPLE_DATA = {
                     'ang li',
                     'development',
                     'back end developer',
-                    _mock.image.avatar(7)
+                    _mock.image.avatar(7),
                   ),
                   children: null,
                 },
@@ -168,7 +168,7 @@ const DATA = {
                     'sheridan mckee',
                     'development',
                     'back end developer',
-                    _mock.image.avatar(6)
+                    _mock.image.avatar(6),
                   ),
                   children: [
                     {
@@ -176,7 +176,7 @@ const DATA = {
                         'ang li',
                         'development',
                         'back end developer',
-                        _mock.image.avatar(7)
+                        _mock.image.avatar(7),
                       ),
                       children: null,
                     },

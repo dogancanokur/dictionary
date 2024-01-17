@@ -143,7 +143,7 @@ export default function FileManagerGridView({
             onSelectAllItems={(checked) =>
               onSelectAllItems(
                 checked,
-                data.map((row) => row.id)
+                data.map((row) => row.id),
               )
             }
             action={

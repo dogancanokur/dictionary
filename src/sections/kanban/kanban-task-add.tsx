@@ -38,7 +38,7 @@ export default function KanbanTaskAdd({ status, onAddTask, onCloseAddTask }: Pro
         avatarUrl: _mock.image.avatar(16),
       },
     }),
-    [name, status]
+    [name, status],
   );
 
   const handleKeyUpAddTask = useCallback(
@@ -49,7 +49,7 @@ export default function KanbanTaskAdd({ status, onAddTask, onCloseAddTask }: Pro
         }
       }
     },
-    [defaultTask, name, onAddTask]
+    [defaultTask, name, onAddTask],
   );
 
   const handleClickAddTask = useCallback(() => {

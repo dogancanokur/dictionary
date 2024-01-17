@@ -77,7 +77,7 @@ function ControlPanel({ settings, onChange }: Props) {
   return (
     <StyledControlPanel>
       {Object.keys(settings).map((name) =>
-        renderSetting(name as MapSettingKeys, settings[name as MapSettingKeys])
+        renderSetting(name as MapSettingKeys, settings[name as MapSettingKeys]),
       )}
     </StyledControlPanel>
   );

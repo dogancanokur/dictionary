@@ -38,7 +38,7 @@ export default function MultiLanguageView() {
     (event: React.MouseEvent<HTMLButtonElement> | null, newPage: number) => {
       setPage(newPage);
     },
-    []
+    [],
   );
 
   const handleChangeRowsPerPage = useCallback(
@@ -46,7 +46,7 @@ export default function MultiLanguageView() {
       setRowsPerPage(parseInt(event.target.value, 10));
       setPage(0);
     },
-    []
+    [],
   );
 
   if (!mounted) {

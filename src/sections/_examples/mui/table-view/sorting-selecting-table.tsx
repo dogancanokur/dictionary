@@ -100,7 +100,7 @@ export default function SortingSelectingTable() {
           onSelectAllRows={(checked) =>
             table.onSelectAllRows(
               checked,
-              tableData.map((row) => row.name)
+              tableData.map((row) => row.name),
             )
           }
           action={
@@ -124,7 +124,7 @@ export default function SortingSelectingTable() {
               onSelectAllRows={(checked) =>
                 table.onSelectAllRows(
                   checked,
-                  tableData.map((row) => row.name)
+                  tableData.map((row) => row.name),
                 )
               }
             />
@@ -133,7 +133,7 @@ export default function SortingSelectingTable() {
               {dataFiltered
                 .slice(
                   table.page * table.rowsPerPage,
-                  table.page * table.rowsPerPage + table.rowsPerPage
+                  table.page * table.rowsPerPage + table.rowsPerPage,
                 )
                 .map((row) => (
                   <TableRow

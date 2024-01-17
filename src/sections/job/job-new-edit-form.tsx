@@ -96,7 +96,7 @@ export default function JobNewEditForm({ currentJob }: Props) {
         negotiable: false,
       },
     }),
-    [currentJob]
+    [currentJob],
   );
 
   const methods = useForm({
@@ -279,7 +279,7 @@ export default function JobNewEditForm({ currentJob }: Props) {
                 getOptionLabel={(option) => option}
                 renderOption={(props, option) => {
                   const { code, label, phone } = countries.filter(
-                    (country) => country.label === option
+                    (country) => country.label === option,
                   )[0];
 
                   if (!label) {

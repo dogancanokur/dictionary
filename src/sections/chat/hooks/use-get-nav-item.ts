@@ -12,7 +12,7 @@ export default function useGetNavItem({ currentUserId, conversation }: Props) {
   const { messages, participants } = conversation;
 
   const participantsInConversation = participants.filter(
-    (participant) => participant.id !== currentUserId
+    (participant) => participant.id !== currentUserId,
   );
 
   const lastMessage = messages[messages.length - 1];

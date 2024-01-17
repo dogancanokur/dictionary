@@ -73,7 +73,7 @@ export default function PostNewEditForm({ currentPost }: Props) {
       metaTitle: currentPost?.metaTitle || '',
       metaDescription: currentPost?.metaDescription || '',
     }),
-    [currentPost]
+    [currentPost],
   );
 
   const methods = useForm({
@@ -122,7 +122,7 @@ export default function PostNewEditForm({ currentPost }: Props) {
         setValue('coverUrl', newFile, { shouldValidate: true });
       }
     },
-    [setValue]
+    [setValue],
   );
 
   const handleRemoveFile = useCallback(() => {

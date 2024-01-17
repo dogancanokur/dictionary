@@ -98,7 +98,7 @@ const ParentItem = forwardRef<HTMLDivElement, ParentItemProps>(
 
       {hasSub && <Iconify icon="eva:arrow-ios-forward-fill" width={16} />}
     </ListItemButton>
-  )
+  ),
 );
 
 // ----------------------------------------------------------------------

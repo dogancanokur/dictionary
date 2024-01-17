@@ -177,7 +177,7 @@ export function AuthProvider({ children }: Props) {
         },
       });
     },
-    []
+    [],
   );
 
   // LOGOUT
@@ -206,7 +206,7 @@ export function AuthProvider({ children }: Props) {
       register,
       logout,
     }),
-    [login, logout, register, state.user, status]
+    [login, logout, register, state.user, status],
   );
 
   return <AuthContext.Provider value={memoizedValue}>{children}</AuthContext.Provider>;

@@ -29,7 +29,7 @@ export default function StretchOptions({ value, onChange }: Props) {
           boxShadow: (theme) =>
             `-24px 8px 24px -4px ${alpha(
               theme.palette.mode === 'light' ? theme.palette.grey[500] : theme.palette.common.black,
-              0.08
+              0.08,
             )}`,
         }),
       }}

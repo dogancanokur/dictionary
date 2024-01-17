@@ -35,7 +35,7 @@ export default function AboutWhat() {
 
   const shadow = `-40px 40px 80px ${alpha(
     isLight ? theme.palette.grey[500] : theme.palette.common.black,
-    0.24
+    0.24,
   )}`;
 
   return (

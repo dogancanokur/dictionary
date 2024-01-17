@@ -317,7 +317,7 @@ export function useNavData() {
         ],
       },
     ],
-    [t]
+    [t],
   );
 
   return data;

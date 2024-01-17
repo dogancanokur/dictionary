@@ -31,7 +31,7 @@ export default function PaginationView() {
     (event: React.MouseEvent<HTMLButtonElement> | null, newPage: number) => {
       setPage(newPage);
     },
-    []
+    [],
   );
 
   const handleChangeRowsPerPage = useCallback(
@@ -39,7 +39,7 @@ export default function PaginationView() {
       setRowsPerPage(parseInt(event.target.value, 10));
       setPage(0);
     },
-    []
+    [],
   );
 
   return (

@@ -65,7 +65,7 @@ function Searchbar() {
       }
       handleClose();
     },
-    [handleClose, router]
+    [handleClose, router],
   );
 
   const handleSearch = useCallback((event: React.ChangeEvent<HTMLTextAreaElement>) => {

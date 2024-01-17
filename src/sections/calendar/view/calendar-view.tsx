@@ -270,7 +270,7 @@ function applyFilter({
       inputData = inputData.filter(
         (event) =>
           fTimestamp(event.start) >= fTimestamp(startDate) &&
-          fTimestamp(event.end) <= fTimestamp(endDate)
+          fTimestamp(event.end) <= fTimestamp(endDate),
       );
     }
   }

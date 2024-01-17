@@ -56,7 +56,7 @@ export default function EcommerceYearlySales({ title, subheader, chart, ...other
       popover.onClose();
       setSeriesData(newValue);
     },
-    [popover]
+    [popover],
   );
 
   return (

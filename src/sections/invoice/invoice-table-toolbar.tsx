@@ -40,31 +40,31 @@ export default function InvoiceTableToolbar({
     (event: React.ChangeEvent<HTMLInputElement>) => {
       onFilters('name', event.target.value);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterService = useCallback(
     (event: SelectChangeEvent<string[]>) => {
       onFilters(
         'service',
-        typeof event.target.value === 'string' ? event.target.value.split(',') : event.target.value
+        typeof event.target.value === 'string' ? event.target.value.split(',') : event.target.value,
       );
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterStartDate = useCallback(
     (newValue: Date | null) => {
       onFilters('startDate', newValue);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterEndDate = useCallback(
     (newValue: Date | null) => {
       onFilters('endDate', newValue);
     },
-    [onFilters]
+    [onFilters],
   );
 
   return (

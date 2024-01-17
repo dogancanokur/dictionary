@@ -90,7 +90,7 @@ export default function FileManagerTable({
           onSelectAllRows={(checked) =>
             onSelectAllRows(
               checked,
-              tableData.map((row) => row.id)
+              tableData.map((row) => row.id),
             )
           }
           action={
@@ -142,7 +142,7 @@ export default function FileManagerTable({
               onSelectAllRows={(checked) =>
                 onSelectAllRows(
                   checked,
-                  tableData.map((row) => row.id)
+                  tableData.map((row) => row.id),
                 )
               }
               sx={{

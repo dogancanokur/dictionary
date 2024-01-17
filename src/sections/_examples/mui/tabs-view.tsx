@@ -119,7 +119,7 @@ export default function TabsView() {
                     >
                       {tab.label}
                     </Box>
-                  )
+                  ),
               )}
             </Stack>
           </ComponentBlock>

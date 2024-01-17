@@ -166,7 +166,7 @@ export function AuthProvider({ children }: Props) {
         displayName: `${firstName} ${lastName}`,
       });
     },
-    []
+    [],
   );
 
   // LOGOUT
@@ -212,7 +212,7 @@ export function AuthProvider({ children }: Props) {
       loginWithGithub,
       loginWithGoogle,
       loginWithTwitter,
-    ]
+    ],
   );
 
   return <AuthContext.Provider value={memoizedValue}>{children}</AuthContext.Provider>;

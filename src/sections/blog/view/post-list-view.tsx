@@ -77,7 +77,7 @@ export default function PostListView() {
     (event: React.SyntheticEvent, newValue: string) => {
       handleFilters('publish', newValue);
     },
-    [handleFilters]
+    [handleFilters],
   );
 
   return (

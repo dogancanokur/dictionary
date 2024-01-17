@@ -29,7 +29,7 @@ export default function AccountChangePassword() {
       .test(
         'no-match',
         'New password must be different than old password',
-        (value, { parent }) => value !== parent.oldPassword
+        (value, { parent }) => value !== parent.oldPassword,
       ),
     confirmNewPassword: Yup.string().oneOf([Yup.ref('newPassword')], 'Passwords must match'),
   });

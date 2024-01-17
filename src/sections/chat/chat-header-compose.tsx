@@ -30,7 +30,7 @@ export default function ChatHeaderCompose({ contacts, onAddRecipients }: Props) 
       setSearchRecipients('');
       onAddRecipients(selected);
     },
-    [onAddRecipients]
+    [onAddRecipients],
   );
 
   return (

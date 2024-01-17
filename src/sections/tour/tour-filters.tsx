@@ -70,35 +70,35 @@ export default function TourFilters({
         : [...filters.services, newValue];
       onFilters('services', checked);
     },
-    [filters.services, onFilters]
+    [filters.services, onFilters],
   );
 
   const handleFilterStartDate = useCallback(
     (newValue: Date | null) => {
       onFilters('startDate', newValue);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterEndDate = useCallback(
     (newValue: Date | null) => {
       onFilters('endDate', newValue);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterDestination = useCallback(
     (newValue: string[]) => {
       onFilters('destination', newValue);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterTourGuide = useCallback(
     (newValue: ITourGuide[]) => {
       onFilters('tourGuides', newValue);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const renderHead = (
@@ -165,7 +165,7 @@ export default function TourFilters({
         renderInput={(params) => <TextField placeholder="Select Destination" {...params} />}
         renderOption={(props, option) => {
           const { code, label, phone } = destinationOptions.filter(
-            (country) => country.label === option
+            (country) => country.label === option,
           )[0];
 
           if (!label) {

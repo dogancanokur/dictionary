@@ -13,7 +13,7 @@ export default function PickerDateTime() {
   const [value, setValue] = useState<Date | null>(new Date());
 
   const [valueResponsive, setValueResponsive] = useState<Date | null>(
-    new Date('2018-01-01T00:00:00.000Z')
+    new Date('2018-01-01T00:00:00.000Z'),
   );
 
   return (

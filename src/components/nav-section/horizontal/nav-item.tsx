@@ -126,7 +126,7 @@ const NavItem = forwardRef<HTMLDivElement, Props>(
         {renderContent}
       </Link>
     );
-  }
+  },
 );
 
 export default NavItem;

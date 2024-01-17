@@ -96,7 +96,7 @@ export default function HomePricing() {
                       borderLeft: (theme) => `dashed 1px ${theme.palette.divider}`,
                     }}
                   />
-                )
+                ),
             )}
           </Box>
         </>

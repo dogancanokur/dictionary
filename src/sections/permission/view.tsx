@@ -30,7 +30,7 @@ export default function PermissionDeniedView() {
         setRole(newRole);
       }
     },
-    []
+    [],
   );
 
   return (

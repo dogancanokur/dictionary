@@ -125,7 +125,7 @@ export default function PricingCard({ card, sx, ...other }: Props) {
             xs: theme.customShadows.card,
             md: `-40px 40px 80px 0px ${alpha(
               theme.palette.mode === 'light' ? theme.palette.grey[500] : theme.palette.common.black,
-              0.16
+              0.16,
             )}`,
           }),
         }),

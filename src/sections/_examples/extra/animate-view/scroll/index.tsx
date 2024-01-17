@@ -19,7 +19,7 @@ export default function ScrollView() {
       setCount(count + 1);
       setSelectVariant(event.target.value);
     },
-    [count]
+    [count],
   );
 
   return (

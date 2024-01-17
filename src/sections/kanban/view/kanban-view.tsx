@@ -97,7 +97,7 @@ export default function KanbanView() {
         console.error(error);
       }
     },
-    [board?.columns, board?.ordered]
+    [board?.columns, board?.ordered],
   );
 
   const renderSkeleton = (

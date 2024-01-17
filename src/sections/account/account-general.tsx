@@ -95,7 +95,7 @@ export default function AccountGeneral() {
         setValue('photoURL', newFile, { shouldValidate: true });
       }
     },
-    [setValue]
+    [setValue],
   );
 
   return (
@@ -160,7 +160,7 @@ export default function AccountGeneral() {
                 getOptionLabel={(option) => option}
                 renderOption={(props, option) => {
                   const { code, label, phone } = countries.filter(
-                    (country) => country.label === option
+                    (country) => country.label === option,
                   )[0];
 
                   if (!label) {

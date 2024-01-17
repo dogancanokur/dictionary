@@ -11,7 +11,7 @@ export default function useEvent(
   events: ICalendarEvent[],
   selectEventId: string,
   selectedRange: ICalendarRange,
-  openForm: boolean
+  openForm: boolean,
 ) {
   const currentEvent = events.find((event) => event.id === selectEventId);
 
@@ -25,7 +25,7 @@ export default function useEvent(
       start: selectedRange ? selectedRange.start : new Date().getTime(),
       end: selectedRange ? selectedRange.end : new Date().getTime(),
     }),
-    [selectedRange]
+    [selectedRange],
   );
 
   if (!openForm) {

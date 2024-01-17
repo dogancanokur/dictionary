@@ -62,7 +62,7 @@ const QontoStepIconRoot = styled('div')<{ ownerState: { active?: boolean } }>(
       borderRadius: '50%',
       backgroundColor: 'currentColor',
     },
-  })
+  }),
 );
 
 function QontoStepIcon(props: StepIconProps) {

@@ -76,7 +76,7 @@ export default function MailView() {
         router.push(href);
       }
     },
-    [openNav, router, mdUp]
+    [openNav, router, mdUp],
   );
 
   const handleClickMail = useCallback(
@@ -92,7 +92,7 @@ export default function MailView() {
 
       router.push(href);
     },
-    [openMail, router, selectedLabelId, mdUp]
+    [openMail, router, selectedLabelId, mdUp],
   );
 
   useEffect(() => {

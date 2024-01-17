@@ -55,7 +55,7 @@ export default function ChatMessageInput({
       phoneNumber: `${user?.phoneNumber}`,
       status: 'online' as 'online' | 'offline' | 'alway' | 'busy',
     }),
-    [user]
+    [user],
   );
 
   const messageData = useMemo(
@@ -67,7 +67,7 @@ export default function ChatMessageInput({
       createdAt: sub(new Date(), { minutes: 1 }),
       senderId: myContact.id,
     }),
-    [message, myContact.id]
+    [message, myContact.id],
   );
 
   const conversationData = useMemo(
@@ -78,7 +78,7 @@ export default function ChatMessageInput({
       type: recipients.length > 1 ? 'GROUP' : 'ONE_TO_ONE',
       unreadCount: 0,
     }),
-    [messageData, myContact, recipients]
+    [messageData, myContact, recipients],
   );
 
   const handleAttach = useCallback(() => {
@@ -112,7 +112,7 @@ export default function ChatMessageInput({
         console.error(error);
       }
     },
-    [conversationData, message, messageData, onAddRecipients, router, selectedConversationId]
+    [conversationData, message, messageData, onAddRecipients, router, selectedConversationId],
   );
 
   return (

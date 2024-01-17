@@ -44,7 +44,7 @@ export default function PaymentCardListDialog({ open, list, onClose, selected, o
       setSearchCard('');
       onClose();
     },
-    [onClose, onSelect]
+    [onClose, onSelect],
   );
 
   const renderList = (
@@ -109,7 +109,7 @@ export default function PaymentCardListDialog({ open, list, onClose, selected, o
 function applyFilter({ inputData, query }: { inputData: IPaymentCard[]; query: string }) {
   if (query) {
     return inputData.filter(
-      (card) => card.cardNumber.toLowerCase().indexOf(query.toLowerCase()) !== -1
+      (card) => card.cardNumber.toLowerCase().indexOf(query.toLowerCase()) !== -1,
     );
   }
 

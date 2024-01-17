@@ -70,7 +70,7 @@ export default function AppAreaInstalled({ title, subheader, chart, ...other }: 
       popover.onClose();
       setSeriesData(newValue);
     },
-    [popover]
+    [popover],
   );
 
   return (

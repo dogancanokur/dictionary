@@ -38,7 +38,7 @@ export function SettingsProvider({ children, defaultSettings }: SettingsProvider
     (lang: string) => {
       update('themeDirection', lang === 'ar' ? 'rtl' : 'ltr');
     },
-    [update]
+    [update],
   );
 
   // Drawer
@@ -75,7 +75,7 @@ export function SettingsProvider({ children, defaultSettings }: SettingsProvider
       onCloseDrawer,
       onToggleDrawer,
       onChangeDirectionByLang,
-    ]
+    ],
   );
 
   return <SettingsContext.Provider value={memoizedValue}>{children}</SettingsContext.Provider>;

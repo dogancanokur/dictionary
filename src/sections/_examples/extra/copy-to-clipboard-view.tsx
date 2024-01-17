@@ -46,7 +46,7 @@ export default function CopyToClipboardView() {
         copy(text);
       }
     },
-    [copy, enqueueSnackbar]
+    [copy, enqueueSnackbar],
   );
 
   const handleClick = useDoubleClick({

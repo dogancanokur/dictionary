@@ -26,7 +26,7 @@ export default function useMessagesScroll(messages: IChatMessage[]) {
       scrollMessagesToBottom();
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [messages]
+    [messages],
   );
 
   return {

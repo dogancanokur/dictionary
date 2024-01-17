@@ -51,12 +51,12 @@ export default function FileManagerNewFolderDialog({
       const newFiles = acceptedFiles.map((file) =>
         Object.assign(file, {
           preview: URL.createObjectURL(file),
-        })
+        }),
       );
 
       setFiles([...files, ...newFiles]);
     },
-    [files]
+    [files],
   );
 
   const handleUpload = () => {

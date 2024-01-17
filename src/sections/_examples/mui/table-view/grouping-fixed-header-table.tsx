@@ -114,7 +114,7 @@ export default function GroupingFixedHeaderTable() {
             <TableBody>
               {TABLE_DATA.slice(
                 table.page * table.rowsPerPage,
-                table.page * table.rowsPerPage + table.rowsPerPage
+                table.page * table.rowsPerPage + table.rowsPerPage,
               ).map((row) => (
                 <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
                   {COLUMNS.map((column) => {

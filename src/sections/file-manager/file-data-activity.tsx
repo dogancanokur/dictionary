@@ -74,7 +74,7 @@ export default function FileDataActivity({ title, subheader, chart, ...other }: 
       popover.onClose();
       setSeriesData(newValue);
     },
-    [popover]
+    [popover],
   );
 
   return (

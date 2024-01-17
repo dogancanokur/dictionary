@@ -72,7 +72,7 @@ export default function FileManagerView() {
 
   const dataInPage = dataFiltered.slice(
     table.page * table.rowsPerPage,
-    table.page * table.rowsPerPage + table.rowsPerPage
+    table.page * table.rowsPerPage + table.rowsPerPage,
   );
 
   const canReset =
@@ -86,7 +86,7 @@ export default function FileManagerView() {
         setView(newView);
       }
     },
-    []
+    [],
   );
 
   const handleFilters = useCallback(
@@ -97,7 +97,7 @@ export default function FileManagerView() {
         [name]: value,
       }));
     },
-    [table]
+    [table],
   );
 
   const handleDeleteItem = useCallback(
@@ -107,7 +107,7 @@ export default function FileManagerView() {
 
       table.onUpdatePageDeleteRow(dataInPage.length);
     },
-    [dataInPage.length, table, tableData]
+    [dataInPage.length, table, tableData],
   );
 
   const handleDeleteItems = useCallback(() => {
@@ -279,7 +279,7 @@ function applyFilter({
 
   if (name) {
     inputData = inputData.filter(
-      (file) => file.name.toLowerCase().indexOf(name.toLowerCase()) !== -1
+      (file) => file.name.toLowerCase().indexOf(name.toLowerCase()) !== -1,
     );
   }
 
@@ -292,7 +292,7 @@ function applyFilter({
       inputData = inputData.filter(
         (file) =>
           fTimestamp(file.createdAt) >= fTimestamp(startDate) &&
-          fTimestamp(file.createdAt) <= fTimestamp(endDate)
+          fTimestamp(file.createdAt) <= fTimestamp(endDate),
       );
     }
   }

@@ -61,21 +61,21 @@ export default function CalendarFilters({
     (newValue: string | string[]) => {
       onFilters('colors', newValue as string[]);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterStartDate = useCallback(
     (newValue: Date | null) => {
       onFilters('startDate', newValue);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterEndDate = useCallback(
     (newValue: Date | null) => {
       onFilters('endDate', newValue);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const renderHead = (
@@ -183,7 +183,7 @@ export default function CalendarFilters({
                     <>
                       {`${fDateTime(event.start, 'dd MMM yy p')} - ${fDateTime(
                         event.end,
-                        'dd MMM yy p'
+                        'dd MMM yy p',
                       )}`}
                     </>
                   )}

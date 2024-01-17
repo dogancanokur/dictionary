@@ -49,7 +49,7 @@ function MapSideBySide({ ...other }: MapBoxProps) {
       right: 0,
       bottom: 0,
     }),
-    [width, mode]
+    [width, mode],
   );
 
   const rightMapPadding = useMemo(
@@ -59,7 +59,7 @@ function MapSideBySide({ ...other }: MapBoxProps) {
       left: 0,
       bottom: 0,
     }),
-    [width, mode]
+    [width, mode],
   );
 
   const handleChangeMode = (event: React.MouseEvent<HTMLElement>, newMode: ModeProps | null) => {

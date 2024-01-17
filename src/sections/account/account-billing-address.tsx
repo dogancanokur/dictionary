@@ -38,7 +38,7 @@ export default function AccountBillingAddress({ addressBook }: Props) {
       popover.onOpen(event);
       setAddressId(id);
     },
-    [popover]
+    [popover],
   );
 
   const handleClose = useCallback(() => {

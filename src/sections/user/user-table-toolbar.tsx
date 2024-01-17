@@ -37,17 +37,17 @@ export default function UserTableToolbar({
     (event: React.ChangeEvent<HTMLInputElement>) => {
       onFilters('name', event.target.value);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterRole = useCallback(
     (event: SelectChangeEvent<string[]>) => {
       onFilters(
         'role',
-        typeof event.target.value === 'string' ? event.target.value.split(',') : event.target.value
+        typeof event.target.value === 'string' ? event.target.value.split(',') : event.target.value,
       );
     },
-    [onFilters]
+    [onFilters],
   );
 
   return (

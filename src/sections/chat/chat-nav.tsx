@@ -98,7 +98,7 @@ export default function ChatNav({
 
       if (inputValue) {
         const results = contacts.filter((contact) =>
-          contact.name.toLowerCase().includes(inputValue)
+          contact.name.toLowerCase().includes(inputValue),
         );
 
         setSearchContacts((prevState) => ({
@@ -107,7 +107,7 @@ export default function ChatNav({
         }));
       }
     },
-    [contacts]
+    [contacts],
   );
 
   const handleClickAwaySearch = useCallback(() => {
@@ -123,7 +123,7 @@ export default function ChatNav({
 
       router.push(`${paths.dashboard.chat}?id=${result.id}`);
     },
-    [handleClickAwaySearch, router]
+    [handleClickAwaySearch, router],
   );
 
   const renderToggleBtn = (

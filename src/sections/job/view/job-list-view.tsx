@@ -93,7 +93,7 @@ export default function JobListView() {
 
       if (inputValue) {
         const results = _jobs.filter(
-          (job) => job.title.toLowerCase().indexOf(search.query.toLowerCase()) !== -1
+          (job) => job.title.toLowerCase().indexOf(search.query.toLowerCase()) !== -1,
         );
 
         setSearch((prevState) => ({
@@ -102,7 +102,7 @@ export default function JobListView() {
         }));
       }
     },
-    [search.query]
+    [search.query],
   );
 
   const handleResetFilters = useCallback(() => {
@@ -233,7 +233,7 @@ const applyFilter = ({
   // FILTERS
   if (employmentTypes.length) {
     inputData = inputData.filter((job) =>
-      job.employmentTypes.some((item) => employmentTypes.includes(item))
+      job.employmentTypes.some((item) => employmentTypes.includes(item)),
     );
   }
 

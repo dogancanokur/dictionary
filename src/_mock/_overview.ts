@@ -25,7 +25,7 @@ export const _appRelated = ['Chrome', 'Drive', 'Dropbox', 'Evernote', 'Github'].
       ratingNumber: _mock.number.rating(index),
       totalReviews: _mock.number.nativeL(index),
     };
-  }
+  },
 );
 
 export const _appInstalled = ['Germany', 'England', 'France', 'Korean', 'USA'].map(
@@ -36,7 +36,7 @@ export const _appInstalled = ['Germany', 'England', 'France', 'Korean', 'USA'].m
     windows: _mock.number.nativeL(index + 1),
     apple: _mock.number.nativeL(index + 2),
     flag: ['flagpack:de', 'flagpack:gb-nir', 'flagpack:fr', 'flagpack:kr', 'flagpack:us'][index],
-  })
+  }),
 );
 
 export const _appAuthors = [...Array(3)].map((_, index) => ({
@@ -135,7 +135,7 @@ export const _ecommerceSalesOverview = ['Total Profit', 'Total Income', 'Total E
     label,
     totalAmount: _mock.number.price(index) * 100,
     value: _mock.number.percent(index),
-  })
+  }),
 );
 
 export const _ecommerceBestSalesman = [...Array(5)].map((_, index) => {

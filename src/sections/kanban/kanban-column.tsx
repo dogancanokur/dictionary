@@ -53,7 +53,7 @@ export default function KanbanColumn({ column, tasks, index }: Props) {
         console.error(error);
       }
     },
-    [column.id, column.name, enqueueSnackbar]
+    [column.id, column.name, enqueueSnackbar],
   );
 
   const handleClearColumn = useCallback(async () => {
@@ -86,7 +86,7 @@ export default function KanbanColumn({ column, tasks, index }: Props) {
         console.error(error);
       }
     },
-    [column.id, openAddTask]
+    [column.id, openAddTask],
   );
 
   const handleUpdateTask = useCallback(async (taskData: IKanbanTask) => {
@@ -109,7 +109,7 @@ export default function KanbanColumn({ column, tasks, index }: Props) {
         console.error(error);
       }
     },
-    [column.id, enqueueSnackbar]
+    [column.id, enqueueSnackbar],
   );
 
   const renderAddTask = (

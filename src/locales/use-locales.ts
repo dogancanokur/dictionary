@@ -25,7 +25,7 @@ export default function useLocales() {
       i18n.changeLanguage(newlang);
       settings.onChangeDirectionByLang(newlang);
     },
-    [i18n, settings]
+    [i18n, settings],
   );
 
   return {

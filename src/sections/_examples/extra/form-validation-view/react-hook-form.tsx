@@ -126,7 +126,7 @@ export default function ReactHookForm({ debug }: Props) {
         setValue('singleUpload', newFile, { shouldValidate: true });
       }
     },
-    [setValue]
+    [setValue],
   );
 
   const handleDropMultiFile = useCallback(
@@ -136,14 +136,14 @@ export default function ReactHookForm({ debug }: Props) {
       const newFiles = acceptedFiles.map((file) =>
         Object.assign(file, {
           preview: URL.createObjectURL(file),
-        })
+        }),
       );
 
       setValue('multiUpload', [...files, ...newFiles], {
         shouldValidate: true,
       });
     },
-    [setValue, values.multiUpload]
+    [setValue, values.multiUpload],
   );
 
   return (
@@ -319,7 +319,7 @@ export default function ReactHookForm({ debug }: Props) {
                   setValue(
                     'multiUpload',
                     values.multiUpload && values.multiUpload?.filter((file) => file !== inputFile),
-                    { shouldValidate: true }
+                    { shouldValidate: true },
                   )
                 }
                 onRemoveAll={() => setValue('multiUpload', [], { shouldValidate: true })}

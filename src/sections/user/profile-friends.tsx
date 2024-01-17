@@ -173,7 +173,7 @@ function FriendCard({ friend }: FriendCardProps) {
 function applyFilter({ inputData, query }: { inputData: IUserProfileFriend[]; query: string }) {
   if (query) {
     return inputData.filter(
-      (friend) => friend.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
+      (friend) => friend.name.toLowerCase().indexOf(query.toLowerCase()) !== -1,
     );
   }
 

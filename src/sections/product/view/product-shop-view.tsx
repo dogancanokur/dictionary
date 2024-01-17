@@ -229,7 +229,7 @@ function applyFilter({
 
   if (colors.length) {
     inputData = inputData.filter((product) =>
-      product.colors.some((color) => colors.includes(color))
+      product.colors.some((color) => colors.includes(color)),
     );
   }
 

@@ -50,7 +50,7 @@ export default function ListView() {
     (event: React.MouseEvent<HTMLDivElement, MouseEvent>, index: number) => {
       setSelectedIndex(index);
     },
-    []
+    [],
   );
 
   const handleCheck = (value: number) => () => {

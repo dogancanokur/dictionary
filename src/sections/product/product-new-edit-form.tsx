@@ -98,7 +98,7 @@ export default function ProductNewEditForm({ currentProduct }: Props) {
       newLabel: currentProduct?.newLabel || { enabled: false, content: '' },
       saleLabel: currentProduct?.saleLabel || { enabled: false, content: '' },
     }),
-    [currentProduct]
+    [currentProduct],
   );
 
   const methods = useForm({
@@ -149,12 +149,12 @@ export default function ProductNewEditForm({ currentProduct }: Props) {
       const newFiles = acceptedFiles.map((file) =>
         Object.assign(file, {
           preview: URL.createObjectURL(file),
-        })
+        }),
       );
 
       setValue('images', [...files, ...newFiles], { shouldValidate: true });
     },
-    [setValue, values.images]
+    [setValue, values.images],
   );
 
   const handleRemoveFile = useCallback(
@@ -162,7 +162,7 @@ export default function ProductNewEditForm({ currentProduct }: Props) {
       const filtered = values.images && values.images?.filter((file) => file !== inputFile);
       setValue('images', filtered);
     },
-    [setValue, values.images]
+    [setValue, values.images],
   );
 
   const handleRemoveAllFiles = useCallback(() => {

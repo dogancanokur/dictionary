@@ -37,7 +37,7 @@ export default function useDateRangePicker(start: Date | null, end: Date | null)
       }
       setEndDate(newValue);
     },
-    [error]
+    [error],
   );
 
   const onReset = useCallback(() => {

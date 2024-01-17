@@ -19,12 +19,12 @@ function MapViewportAnimation({ data, ...other }: Props) {
   const onSelectCity = useCallback(
     (
       event: React.ChangeEvent<HTMLInputElement>,
-      { longitude, latitude }: { longitude: number; latitude: number }
+      { longitude, latitude }: { longitude: number; latitude: number },
     ) => {
       setSelectedCity(event.target.value);
       mapRef.current?.flyTo({ center: [longitude, latitude], duration: 2000 });
     },
-    []
+    [],
   );
 
   return (

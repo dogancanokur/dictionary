@@ -47,7 +47,7 @@ export default function KanbanColumnAdd() {
         handleCreateColumn();
       }
     },
-    [handleCreateColumn]
+    [handleCreateColumn],
   );
 
   return (

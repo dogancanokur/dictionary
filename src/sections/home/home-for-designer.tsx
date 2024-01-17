@@ -38,7 +38,7 @@ export default function HomeForDesigner() {
             mt: 3,
             mb: 5,
             ...textGradient(
-              `300deg, ${theme.palette.primary.main} 0%, ${theme.palette.warning.main} 100%`
+              `300deg, ${theme.palette.primary.main} 0%, ${theme.palette.warning.main} 100%`,
             ),
           }}
         >

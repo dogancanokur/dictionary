@@ -34,8 +34,8 @@ function MapGeoJSONAnimation({ ...other }: MapBoxProps) {
           center: [-100, 0],
           angle: Date.now() / 1000,
           radius: 20,
-        })
-      )
+        }),
+      ),
     );
 
     return () => window.cancelAnimationFrame(animation);

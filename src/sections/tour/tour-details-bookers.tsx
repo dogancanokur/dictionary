@@ -30,7 +30,7 @@ export default function TourDetailsBookers({ bookers }: Props) {
 
       setApproved(selected);
     },
-    [approved]
+    [approved],
   );
 
   return (

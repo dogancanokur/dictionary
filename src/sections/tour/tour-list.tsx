@@ -24,14 +24,14 @@ export default function TourList({ tours }: Props) {
     (id: string) => {
       router.push(paths.dashboard.tour.details(id));
     },
-    [router]
+    [router],
   );
 
   const handleEdit = useCallback(
     (id: string) => {
       router.push(paths.dashboard.tour.edit(id));
     },
-    [router]
+    [router],
   );
 
   const handleDelete = useCallback((id: string) => {

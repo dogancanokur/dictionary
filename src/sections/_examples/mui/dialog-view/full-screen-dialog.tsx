@@ -24,8 +24,8 @@ const Transition = forwardRef(
     props: TransitionProps & {
       children: React.ReactElement;
     },
-    ref: React.Ref<unknown>
-  ) => <Slide direction="up" ref={ref} {...props} />
+    ref: React.Ref<unknown>,
+  ) => <Slide direction="up" ref={ref} {...props} />,
 );
 
 export default function FullScreenDialog() {

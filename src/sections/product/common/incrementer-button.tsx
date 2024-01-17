@@ -55,7 +55,7 @@ const IncrementerButton = forwardRef<HTMLDivElement, Props>(
         <Iconify icon="mingcute:add-line" width={16} />
       </IconButton>
     </Stack>
-  )
+  ),
 );
 
 export default IncrementerButton;

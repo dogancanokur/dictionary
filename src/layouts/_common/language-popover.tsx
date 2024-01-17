@@ -22,7 +22,7 @@ export default function LanguagePopover() {
       locales.onChangeLang(newLang);
       popover.onClose();
     },
-    [locales, popover]
+    [locales, popover],
   );
 
   return (

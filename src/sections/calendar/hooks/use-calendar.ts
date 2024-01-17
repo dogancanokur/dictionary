@@ -57,7 +57,7 @@ export default function useCalendar() {
         setView(newView);
       }
     },
-    [calendarEl]
+    [calendarEl],
   );
 
   const onDateToday = useCallback(() => {
@@ -100,7 +100,7 @@ export default function useCalendar() {
         end: fTimestamp(arg.end),
       });
     },
-    [calendarEl, onOpenForm]
+    [calendarEl, onOpenForm],
   );
 
   const onClickEvent = useCallback(
@@ -110,7 +110,7 @@ export default function useCalendar() {
       onOpenForm();
       setSelectEventId(event.id);
     },
-    [onOpenForm]
+    [onOpenForm],
   );
 
   const onResizeEvent = useCallback(
@@ -124,7 +124,7 @@ export default function useCalendar() {
         end: fTimestamp(event.end),
       });
     },
-    []
+    [],
   );
 
   const onDropEvent = useCallback(
@@ -138,7 +138,7 @@ export default function useCalendar() {
         end: fTimestamp(event.end),
       });
     },
-    []
+    [],
   );
 
   const onClickEventInFilters = useCallback(
@@ -148,7 +148,7 @@ export default function useCalendar() {
         setSelectEventId(eventId);
       }
     },
-    [onOpenForm]
+    [onOpenForm],
   );
 
   return {

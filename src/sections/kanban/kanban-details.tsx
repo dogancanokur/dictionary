@@ -87,7 +87,7 @@ export default function KanbanDetails({
         console.error(error);
       }
     },
-    [onUpdateTask, task, taskName]
+    [onUpdateTask, task, taskName],
   );
 
   const handleChangeTaskDescription = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {

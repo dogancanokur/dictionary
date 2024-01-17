@@ -69,28 +69,28 @@ export default function JobFilters({
         : [...filters.employmentTypes, newValue];
       onFilters('employmentTypes', checked);
     },
-    [filters.employmentTypes, onFilters]
+    [filters.employmentTypes, onFilters],
   );
 
   const handleFilterExperience = useCallback(
     (newValue: string) => {
       onFilters('experience', newValue);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterRoles = useCallback(
     (newValue: string[]) => {
       onFilters('roles', newValue);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterLocations = useCallback(
     (newValue: string[]) => {
       onFilters('locations', newValue);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterBenefits = useCallback(
@@ -100,7 +100,7 @@ export default function JobFilters({
         : [...filters.benefits, newValue];
       onFilters('benefits', checked);
     },
-    [filters.benefits, onFilters]
+    [filters.benefits, onFilters],
   );
 
   const renderHead = (
@@ -221,7 +221,7 @@ export default function JobFilters({
         renderInput={(params) => <TextField placeholder="Select Locations" {...params} />}
         renderOption={(props, option) => {
           const { code, label, phone } = locationOptions.filter(
-            (country) => country.label === option
+            (country) => country.label === option,
           )[0];
 
           if (!label) {

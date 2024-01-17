@@ -56,7 +56,7 @@ export default function AccountBillingPlan({ cardList, addressBook, plans }: Pro
         setSelectedPlan(newValue);
       }
     },
-    [plans]
+    [plans],
   );
 
   const handleSelectAddress = useCallback((newValue: IAddressItem | null) => {

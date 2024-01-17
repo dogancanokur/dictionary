@@ -40,7 +40,7 @@ export const StyledArrow = styled('span')<{ arrow: MenuPopoverArrowValue }>(({ a
     clipPath: 'polygon(0% 0%, 100% 100%, 0% 100%)',
     border: `solid 1px ${alpha(
       theme.palette.mode === 'light' ? theme.palette.grey[500] : theme.palette.common.black,
-      0.12
+      0.12,
     )}`,
     ...bgBlur({
       color: theme.palette.background.paper,

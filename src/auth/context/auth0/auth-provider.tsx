@@ -31,7 +31,7 @@ function AuthProviderWrapper({ children }: Props) {
       loginWithPopup?.(options);
       setPopupClick(false);
     },
-    [loginWithPopup]
+    [loginWithPopup],
   );
 
   // LOGOUT
@@ -39,7 +39,7 @@ function AuthProviderWrapper({ children }: Props) {
     async (options?: LogoutOptions) => {
       logout?.(options);
     },
-    [logout]
+    [logout],
   );
 
   // ----------------------------------------------------------------------
@@ -65,7 +65,7 @@ function AuthProviderWrapper({ children }: Props) {
       loginWithPopup: handleLoginWithPopup,
       logout: handleLogout,
     }),
-    [handleLoginWithPopup, handleLogout, loginWithRedirect, status, user]
+    [handleLoginWithPopup, handleLogout, loginWithRedirect, status, user],
   );
 
   return <AuthContext.Provider value={memoizedValue}>{children}</AuthContext.Provider>;

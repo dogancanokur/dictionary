@@ -27,7 +27,7 @@ const ColorPicker = forwardRef<HTMLDivElement, ColorPickerProps>(
           onSelectColor(newSelected);
         }
       },
-      [onSelectColor, selected, singleSelect]
+      [onSelectColor, selected, singleSelect],
     );
 
     return (
@@ -97,7 +97,7 @@ const ColorPicker = forwardRef<HTMLDivElement, ColorPickerProps>(
         })}
       </Stack>
     );
-  }
+  },
 );
 
 export default ColorPicker;

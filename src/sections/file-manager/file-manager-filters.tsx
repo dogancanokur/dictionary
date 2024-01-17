@@ -50,21 +50,21 @@ export default function FileManagerFilters({
     (event: React.ChangeEvent<HTMLInputElement>) => {
       onFilters('name', event.target.value);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterStartDate = useCallback(
     (newValue: Date | null) => {
       onFilters('startDate', newValue);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterEndDate = useCallback(
     (newValue: Date | null) => {
       onFilters('endDate', newValue);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterType = useCallback(
@@ -74,7 +74,7 @@ export default function FileManagerFilters({
         : [...filters.type, newValue];
       onFilters('type', checked);
     },
-    [filters.type, onFilters]
+    [filters.type, onFilters],
   );
 
   const handleResetType = useCallback(() => {

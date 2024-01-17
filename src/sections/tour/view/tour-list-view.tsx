@@ -97,7 +97,7 @@ export default function TourListView() {
 
       if (inputValue) {
         const results = _tours.filter(
-          (tour) => tour.name.toLowerCase().indexOf(search.query.toLowerCase()) !== -1
+          (tour) => tour.name.toLowerCase().indexOf(search.query.toLowerCase()) !== -1,
         );
 
         setSearch((prevState) => ({
@@ -106,7 +106,7 @@ export default function TourListView() {
         }));
       }
     },
-    [search.query]
+    [search.query],
   );
 
   const handleResetFilters = useCallback(() => {
@@ -244,7 +244,7 @@ const applyFilter = ({
       inputData = inputData.filter(
         (tour) =>
           fTimestamp(tour.available.startDate) >= fTimestamp(startDate) &&
-          fTimestamp(tour.available.endDate) <= fTimestamp(endDate)
+          fTimestamp(tour.available.endDate) <= fTimestamp(endDate),
       );
     }
   }
@@ -255,7 +255,7 @@ const applyFilter = ({
 
   if (tourGuideIds.length) {
     inputData = inputData.filter((tour) =>
-      tour.tourGuides.some((filterItem) => tourGuideIds.includes(filterItem.id))
+      tour.tourGuides.some((filterItem) => tourGuideIds.includes(filterItem.id)),
     );
   }
 

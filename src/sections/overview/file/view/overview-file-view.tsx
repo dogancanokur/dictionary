@@ -73,12 +73,12 @@ export default function OverviewFileView() {
       const newFiles = acceptedFiles.map((file) =>
         Object.assign(file, {
           preview: URL.createObjectURL(file),
-        })
+        }),
       );
 
       setFiles([...files, ...newFiles]);
     },
-    [files]
+    [files],
   );
 
   const renderStorageOverview = (

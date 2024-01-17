@@ -39,7 +39,7 @@ export default function NavList({ data, depth, hasChild, config }: NavListRootPr
 
   useEffect(() => {
     const appBarEl = Array.from(
-      document.querySelectorAll(`.${appBarClasses.root}`)
+      document.querySelectorAll(`.${appBarClasses.root}`),
     ) as Array<HTMLElement>;
 
     // Reset styles when hover

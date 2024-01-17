@@ -23,14 +23,14 @@ export default function JobList({ jobs }: Props) {
     (id: string) => {
       router.push(paths.dashboard.job.details(id));
     },
-    [router]
+    [router],
   );
 
   const handleEdit = useCallback(
     (id: string) => {
       router.push(paths.dashboard.job.edit(id));
     },
-    [router]
+    [router],
   );
 
   const handleDelete = useCallback((id: string) => {

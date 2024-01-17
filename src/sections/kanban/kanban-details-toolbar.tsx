@@ -45,7 +45,7 @@ export default function KanbanDetailsToolbar({
       popover.onClose();
       setStatus(newValue);
     },
-    [popover]
+    [popover],
   );
 
   return (

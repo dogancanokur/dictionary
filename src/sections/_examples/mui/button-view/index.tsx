@@ -96,7 +96,7 @@ export default function ButtonView() {
               <Box key={tab.value} sx={{ mt: 5 }}>
                 {tab.component}
               </Box>
-            )
+            ),
         )}
       </Container>
     </>

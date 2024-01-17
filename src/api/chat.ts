@@ -32,7 +32,7 @@ export function useGetContacts() {
       contactsValidating: isValidating,
       contactsEmpty: !isLoading && !data?.contacts.length,
     }),
-    [data?.contacts, error, isLoading, isValidating]
+    [data?.contacts, error, isLoading, isValidating],
   );
 
   return memoizedValue;
@@ -80,7 +80,7 @@ export function useGetConversation(conversationId: string) {
       conversationError: error,
       conversationValidating: isValidating,
     }),
-    [data?.conversation, error, isLoading, isValidating]
+    [data?.conversation, error, isLoading, isValidating],
   );
 
   return memoizedValue;
@@ -121,7 +121,7 @@ export async function sendMessage(conversationId: string, messageData: IChatMess
         conversation,
       };
     },
-    false
+    false,
   );
 
   /**
@@ -139,14 +139,14 @@ export async function sendMessage(conversationId: string, messageData: IChatMess
                 ...conversation,
                 messages: [...conversation.messages, messageData],
               }
-            : conversation
+            : conversation,
       );
 
       return {
         conversations,
       };
     },
-    false
+    false,
   );
 }
 
@@ -173,7 +173,7 @@ export async function createConversation(conversationData: IChatConversation) {
         conversations,
       };
     },
-    false
+    false,
   );
 
   return res.data;
@@ -202,7 +202,7 @@ export async function clickConversation(conversationId: string) {
     (currentData: any) => {
       const conversations: IChatConversations = currentData.conversations.map(
         (conversation: IChatConversation) =>
-          conversation.id === conversationId ? { ...conversation, unreadCount: 0 } : conversation
+          conversation.id === conversationId ? { ...conversation, unreadCount: 0 } : conversation,
       );
 
       return {
@@ -210,6 +210,6 @@ export async function clickConversation(conversationId: string) {
         conversations,
       };
     },
-    false
+    false,
   );
 }

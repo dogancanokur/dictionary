@@ -43,7 +43,7 @@ export default function InvoiceNewEditForm({ currentInvoice }: Props) {
       .test(
         'date-min',
         'Due date must be later than create date',
-        (value, { parent }) => value.getTime() > parent.createDate.getTime()
+        (value, { parent }) => value.getTime() > parent.createDate.getTime(),
       ),
     // not required
     taxes: Yup.number(),
@@ -78,7 +78,7 @@ export default function InvoiceNewEditForm({ currentInvoice }: Props) {
       ],
       totalAmount: currentInvoice?.totalAmount || 0,
     }),
-    [currentInvoice]
+    [currentInvoice],
   );
 
   const methods = useForm({

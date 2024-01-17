@@ -28,7 +28,7 @@ export default function MaxWidthDialog() {
   const handleMaxWidthChange = useCallback((event: SelectChangeEvent<typeof maxWidth>) => {
     setMaxWidth(
       // @ts-expect-error autofill of arbitrary value is not handled.
-      event.target.value
+      event.target.value,
     );
   }, []);
 

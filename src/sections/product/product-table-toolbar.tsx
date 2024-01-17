@@ -45,27 +45,27 @@ export default function ProductTableToolbar({
     (event: React.ChangeEvent<HTMLInputElement>) => {
       onFilters('name', event.target.value);
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterStock = useCallback(
     (event: SelectChangeEvent<string[]>) => {
       onFilters(
         'stock',
-        typeof event.target.value === 'string' ? event.target.value.split(',') : event.target.value
+        typeof event.target.value === 'string' ? event.target.value.split(',') : event.target.value,
       );
     },
-    [onFilters]
+    [onFilters],
   );
 
   const handleFilterPublish = useCallback(
     (event: SelectChangeEvent<string[]>) => {
       onFilters(
         'publish',
-        typeof event.target.value === 'string' ? event.target.value.split(',') : event.target.value
+        typeof event.target.value === 'string' ? event.target.value.split(',') : event.target.value,
       );
     },
-    [onFilters]
+    [onFilters],
   );
 
   return (

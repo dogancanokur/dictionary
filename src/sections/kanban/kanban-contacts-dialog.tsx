@@ -131,7 +131,7 @@ function applyFilter({ inputData, query }: { inputData: IKanbanAssignee[]; query
     inputData = inputData.filter(
       (contact) =>
         contact.name.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
-        contact.email.toLowerCase().indexOf(query.toLowerCase()) !== -1
+        contact.email.toLowerCase().indexOf(query.toLowerCase()) !== -1,
     );
   }
 

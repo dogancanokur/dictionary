@@ -27,7 +27,7 @@ export default function SimpleDialog() {
       dialog.onFalse();
       setSelectedValue(value);
     },
-    [dialog]
+    [dialog],
   );
 
   return (

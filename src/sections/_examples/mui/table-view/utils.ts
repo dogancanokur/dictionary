@@ -6,7 +6,7 @@ export default function createData(
   fat: number,
   carbs: number,
   protein: number,
-  price: number
+  price: number,
 ) {
   return {
     name,

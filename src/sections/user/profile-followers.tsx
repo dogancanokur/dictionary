@@ -32,7 +32,7 @@ export default function ProfileFollowers({ followers }: Props) {
 
       setFollowed(selected);
     },
-    [followed]
+    [followed],
   );
 
   return (
